@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ride_sharing_user_app/theme/custom_theme_colors.dart';
 ThemeData lightTheme = ThemeData(
     fontFamily: 'SFProText',
-    primaryColor: const Color(0xFF00A08D),
+    primaryColor: const Color(0xFF046FD5),
     disabledColor: const Color(0xFFBABFC4),
-    primaryColorDark: const Color(0xff007B6C),
+    primaryColorDark: const Color(0xff0560B9),
     brightness: Brightness.light,
     hintColor: const Color(0xFF9F9F9F),
     cardColor: Colors.white,
@@ -18,7 +18,7 @@ ThemeData lightTheme = ThemeData(
       primary: Color(0xFFBBF9F1),
       surface: Color(0xFFF3F3F3),
       error: Color(0xFFFF6767),
-      secondary: Color(0xFF008C7B),
+      secondary: Color(0xFF0469C9),
       tertiary: Color(0xFF7CCD8B),
       tertiaryContainer: Color(0xFFC98B3E),
       secondaryContainer: Color(0xFFEE6464),
@@ -39,7 +39,7 @@ ThemeData lightTheme = ThemeData(
 
 
   ),
-  textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(foregroundColor: const Color(0xFF00A08D))),
+  textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(foregroundColor: const Color(0xFF0560B9))),
 
   textTheme: const TextTheme(
    displayLarge: TextStyle(fontWeight: FontWeight.w300, color: Color(0xFF202020)),
@@ -47,6 +47,6 @@ ThemeData lightTheme = ThemeData(
    displaySmall: TextStyle(fontWeight: FontWeight.w300, color: Color(0xFF282828)),
    bodyLarge: TextStyle(fontWeight: FontWeight.w300, color: Color(0xFF272727)),
     bodyMedium: TextStyle(fontWeight: FontWeight.w300, color: Color(0xFF334257)),
-    bodySmall: TextStyle(fontWeight: FontWeight.w300, color: Color(0xFF1D2D2B)),
+    bodySmall: TextStyle(fontWeight: FontWeight.w300, color: Color(0xFF023362)),
   )
 );

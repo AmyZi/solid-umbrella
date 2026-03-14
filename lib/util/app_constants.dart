@@ -3,9 +3,9 @@ import 'package:ride_sharing_user_app/localization/language_model.dart';
 import 'package:ride_sharing_user_app/util/images.dart';
 
 class AppConstants {
-  static const String appName = 'DriveMond Driver';
-  static const String baseUrl = 'YOUR_BASE_URL_HERE';
-  static const String polylineMapKey = 'YOUR_MAP_KEY_HERE';
+  static const String appName = 'Way2Go Driver';
+  static const String baseUrl = 'https://way2go-lb.com';
+  static const String polylineMapKey = 'AIzaSyCOsCDcX7G53qvAKzdRVGlaatRvhrXSKRs';
   static const double appVersion = 3.0;   /// Flutter SDK 3.38.7
   static const String configUri = '/api/driver/configuration';
   static const String registration = '/api/driver/auth/registration';

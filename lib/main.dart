@@ -37,10 +37,10 @@ Future<void> main() async {
   if(GetPlatform.isAndroid) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
-        apiKey: "AIzaSyCFGqSEiWMItei_AFIUgdM53PWrvyGmjFY",
-        appId: "1:76471554747:android:28346318a6d400326d0f9e",
-        messagingSenderId: "76471554747",
-        projectId: "drivevalley-fdb7f",
+        apiKey: "AIzaSyA37FqlmRP0eV54IiWkU7LTQTMkLAFt_Yw",
+        appId: "1:464484124395:android:0d3704934d42202e7520ae",
+        messagingSenderId: "464484124395",
+        projectId: "valencias-bestall-mat",
       ),
     );
   } else {

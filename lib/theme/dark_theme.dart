@@ -4,7 +4,7 @@ import 'custom_theme_colors.dart';
 
 ThemeData darkTheme = ThemeData(
   fontFamily: 'SFProText',
-  primaryColor: const Color(0xFF00735f),
+  primaryColor: const Color(0xFF0560B9),
   brightness: Brightness.dark,
   cardColor: const Color(0xFF242424),
   hintColor: const Color(0xFF9F9F9F),
@@ -19,7 +19,7 @@ ThemeData darkTheme = ThemeData(
   colorScheme: const ColorScheme.dark(
       primary: Color(0xFF02B8A2),
       error: Color(0xFFFF6767),
-      secondary: Color(0xFF008C7B),
+      secondary: Color(0xFF034A94),
       tertiary: Color(0xFF7CCD8B),
       tertiaryContainer: Color(0xFFC98B3E),
       secondaryContainer: Color(0xFFEE6464),
@@ -36,7 +36,7 @@ ThemeData darkTheme = ThemeData(
       secondaryFixedDim: Color(0xFF808080)
 
   ),
-  textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(foregroundColor: const Color(0xFF00735f))),
+  textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(foregroundColor: const Color(0xFF0560B9))),
     textTheme: const TextTheme(
       displayLarge: TextStyle(fontWeight: FontWeight.w300, color: Color(0xFF202020)),
       displayMedium: TextStyle(fontWeight: FontWeight.w300, color: Color(0xFF393939)),

@@ -1,1 +1,0 @@
- /Users/mac/Desktop/way2go-dm-mobile/.dart_tool/flutter_build/31af9c6a11603c30e0905a17c3df78a9/native_assets.json: 
