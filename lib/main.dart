@@ -46,7 +46,9 @@ Future<void> main() async {
       );
     }
   } else {
-    await Firebase.initializeApp();
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp();
+    }
   }
 
   cameras = await availableCameras();
