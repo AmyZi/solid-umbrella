@@ -34,7 +34,14 @@ Future<void> main() async {
   );
 
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyA37FqlmRP0eV54IiWkU7LTQTMkLAFt_Yw",
+      appId: "1:464484124395:android:0d3704934d42202e7520ae",
+        messagingSenderId: "464484124395",
+        projectId: "valencias-bestall-mat",
+      ),
+  );
 
   cameras = await availableCameras();
 
