@@ -46,6 +46,9 @@ class OutOfZoneController extends GetxController implements GetxService {
 
   Future<void> findDriverCurrentZone() async {
     await getDriverCurrentPosition();
+    isDriverOutOfZone = false; // TEMP: bypass for debugging outside service area
+    return; // TEMP: skip the zone-matching loop entirely
+    
     for(int i=0 ; i<polygones.length ; i++){
       if(MapHelper.isPointInPolygon(LatLngPoint(location.latitude, location.longitude), polygones[i])){
         currentZone = polygones[i];
