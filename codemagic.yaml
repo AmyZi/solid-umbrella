@@ -20,7 +20,7 @@ workflows:
 
       - name: Build iOS for Simulator (no code signing needed)
         script: |
-          flutter build ios --release --no-codesign --simulator
+          flutter build ios --debug --simulator
 
       - name: Zip Runner.app for Appetize upload
         script: |
