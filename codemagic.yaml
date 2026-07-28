@@ -1,4 +1,33 @@
-scripts:
-  - name: Build iOS for Simulator
-    script: |
-      flutter build ios --release --no-codesign --simulator
+workflows:
+  ios-simulator-appetize:
+    name: iOS Simulator Build for Appetize
+    max_build_duration: 60
+    instance_type: mac_mini_m1
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+
+      - name: Install CocoaPods dependencies
+        script: |
+          cd ios
+          pod install --repo-update
+          cd ..
+
+      - name: Build iOS for Simulator (no code signing needed)
+        script: |
+          flutter build ios --release --no-codesign --simulator
+
+      - name: Zip Runner.app for Appetize upload
+        script: |
+          cd build/ios/iphonesimulator
+          zip -r Runner.zip Runner.app
+          cd ../../../
+
+    artifacts:
+      - build/ios/iphonesimulator/Runner.zip
+      - flutter_drive.log
