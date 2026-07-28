@@ -45,9 +45,14 @@ Future<void> main() async {
         ),
       );
     }
+  } catch (e) {
+  if (e.toString().contains('duplicate-app')) {
+    // Firebase already initialized natively — safe to continue
   } else {
-    await Firebase.initializeApp();
+    rethrow;
   }
+}
+
 
   cameras = await availableCameras();
 
