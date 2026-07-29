@@ -20,7 +20,8 @@ workflows:
 
       - name: Disable Crashlytics symbol upload for simulator/debug build
         script: |
-          find ios/Pods/FirebaseCrashlytics -name "upload-symbols" -exec sh -c 'echo "#!/bin/sh" > "{}" && echo "exit 0" >> "{}" && chmod +x "{}"' \;
+          find ios/Pods -iname "upload-symbols" -exec sh -c 'echo "#!/bin/sh" > "{}" && echo "exit 0" >> "{}" && chmod +x "{}"' \; || true
+          find /Users -iname "upload-symbols" 2>/dev/null | head -5 || true
 
       - name: Build iOS for Simulator (no code signing needed)
         script: |
