@@ -39,9 +39,17 @@ class OutOfZoneController extends GetxController implements GetxService {
   }
 
   Future getDriverCurrentPosition() async{
-    location = await Geolocator.getCurrentPosition(
-      locationSettings: LocationSettings(accuracy: LocationAccuracy.high)
-    );
+    try {
+      location = await Geolocator.getCurrentPosition(
+        locationSettings: LocationSettings(accuracy: LocationAccuracy.high)
+      );
+    } catch (e) {
+      location = Position(
+        longitude: 0, latitude: 0, timestamp: DateTime.now(),
+        accuracy: 1, altitude: 1, heading: 1, speed: 1,
+        speedAccuracy: 1, altitudeAccuracy: 1, headingAccuracy: 1
+      );
+    }
   }
 
   Future<void> findDriverCurrentZone() async {
