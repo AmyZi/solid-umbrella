@@ -18,6 +18,10 @@ workflows:
           pod install --repo-update
           cd ..
 
+      - name: Disable Crashlytics symbol upload for simulator/debug build
+        script: |
+          find ios/Pods/FirebaseCrashlytics -name "upload-symbols" -exec sh -c 'echo "#!/bin/sh" > "{}" && echo "exit 0" >> "{}" && chmod +x "{}"' \;
+
       - name: Build iOS for Simulator (no code signing needed)
         script: |
           flutter build ios --debug --simulator
